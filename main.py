@@ -32,6 +32,11 @@ def normalize(frame):
 
 
 def export_df(frame):
+    root = tk.Tk()
+    root.withdraw()
+
+    file_path = filedialog.asksaveasfile()
+    frame.to_csv(file_path, index=False, line_terminator='\n')
     print(frame)
 
 
