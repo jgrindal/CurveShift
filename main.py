@@ -1,6 +1,10 @@
 import tkinter as tk
+from tkinter import *
 from tkinter import filedialog
+
 import pandas as pd
+
+import curve_shift.curve_app
 
 
 def build_file_list():
@@ -47,7 +51,10 @@ if __name__ == '__main__':
     # This is our main function that will be executed
     # It's a simple process, we're going to build a file list, consolidate the files in a dataframe and export it
 
+    window = curve_shift.curve_app()
+'''
     file_list = build_file_list()
     df = consolidate_files(file_list)
     df = normalize(df)
     export_df(df)
+'''
